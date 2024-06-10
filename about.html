@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>
+            health</title>
+        <style>
+            body{
+            top:100%;
+            left:100%;
+            transform:translate(0%,0%);
+            background:rgba(0,0,0,0.4);
+        }
+       #videobg{
+        position:fixed;
+        z-index:-1;
+       }
+       @media(min-aspect-ratio:16/9){
+        #videobg{
+            width:100%;
+            height:auto;
+             }     }
+        @media(max-aspect-ratio:16/9){
+        #videobg{
+            width:auto;
+            height:100%;
+        }
+       }
+@media(max-width:767px){
+    #videobg{
+        display:none;
+    }}
+        div{
+            border:5px solid rgb(22,23,212);
+            background-color:rgb(210,151,114);
+            padding-top:50px;
+            padding-right:50px;
+            padding-bottom:50px;
+            padding-left:80px;
+        }
+        @media screen and (min-width:320px){
+            body{
+                background-color:grey;background-image:url(hospital8.jpg);
+                background-size:cover;
+            }}
+            @media screen and (min-width:768px) and (max-width:1024px){body{background-color:aliceblue;background-image:url(hospital8.jpg);
+                background-size:cover;
+                background-color:gold;
+            }}
+            @media screen and (min-width:1224px){
+            body{
+                background-color:darkolivegreen;background-image:url(hospital8.jpg);
+                background-size:cover;
+            }}
+            @media screen and (min-width:1824px){
+            body{
+                background-color:indianred;background-image:url(hospital8.jpg);
+                background-size:cover;}}h1{
+            text-align: center};body{
+ background-color:bisque;
+ background-size:cover;background-image:url(hospital8.jpg);}body{background-image: url(hospital8.jpg);
+                background-size:cover;
+            }
+            nav{
+                background-color:rgba(234,45,23);
+                color:aquamarine;
+                padding:10px;
+            }
+            nav ul{
+                list-style-type: none;
+                margin:0;
+                padding:0;
+            }
+            nav ul li{
+                display:inline;
+                margin-right: 20px;
+
+            }
+            nav ul li a{
+                color:azure;
+                text-decoration:none;
+
+            }
+            nav ul li a:hover{
+                text-decoration:underline;
+            }
+            p{
+                
+                text-align:center;
+               
+            }
+            h1{text-shadow:5px 5px 10px yellow;}
+            .example{background-color:aqua;
+            padding:20px;}
+            @media screen and (min-width:600px){
+                .example{
+                    font-size:80px;
+                }
+            }
+            @media screen and (min-width:300px){
+                .example{
+                    font-size:30px;
+                }
+            }
+            </style></head>
+            <body>
+                
+                <video id="videobg" poster="hospital8.jpg" autoplay muted loop>
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+                <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="login.html">login</a></li>
+                    <li><a href="contactus.html">contactus</a><li>
+                        <li><a href="register.html">register</a><li>
+                            <li><a href="bill.html">bill</a><li>
+                        </ul>
+                    </nav>
+                <h1>TRANSFORMING HEALTH CARE</h1>
+                <div class="example"><p>
+                    Mayo Clinic is the largest integrated,not-for-profit medical group practice in the world.
+                    we're building the future,one where the best possible care in available
+                    to everyone-and more people can heal at hom.Our relentless reseaarch turns into earlier diagnosis
+                    and new cures.That's how we inspire hope in those who need it most</p></div>
+</body>
+</html>

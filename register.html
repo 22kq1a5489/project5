@@ -1,0 +1,186 @@
+<html>
+    <head>
+        <title>
+            ui pages
+        </title> 
+
+    <style>
+        
+        .container{
+    margin:0 auto;
+    background:hsl(154,25,37%);
+    box-sizing:content-box;}
+        @media screen and (min-width:320px){
+            .container{
+        width:30dvi;
+        padding-bottom:10px 10px;
+        padding-left: 10px 10px;
+        background-color:rgb(17, 177, 231);
+      box-shadow: 10px 10px;
+    }
+    body{
+        background-color:grey;
+        background-image:url(hospital6.jpg);
+        background-size:cover;
+    }}
+    @media screen and (min-width:768px) and (max-width:1024px){
+        .container{
+        width:30dvi;
+        padding-bottom:10px 10px;
+        padding-left: 10px 10px;
+        background-color:rgb(17, 177, 231);
+        box-shadow: 10px 10px;
+    }
+    body{
+        background-color:gold;background-image:url(hospital6.jpg);
+        background-size:cover;
+    }}
+    @media screen and (min-width:1224px){
+        .container{
+        width:30dvi;
+        padding-bottom:10px 10px;
+        padding-left: 10px 10px;
+        background-color:rgb(17, 177, 231);
+        box-shadow: 10px 10px;
+    }
+    body{
+        background-color:darkolivegreen;background-image:url(hospital6.jpg);
+        background-size:cover;
+    }}
+    @media screen and (min-width:1824px){
+        .container{
+        width:30dvi;
+        padding-bottom:10px 10px;
+        padding-left: 10px 10px;
+        background-color:rgb(17, 177, 231);
+        box-shadow: 10px 10px;
+    }
+    body{
+        
+        background-color:indianred;background-image:url(hospital6.jpg);
+        background-size:cover;}}
+        body{
+        background-color:rgb(22,222,22);
+        color:rgb(47, 71, 102);
+        background-image:url(hospital6.jpg);
+        background-size:cover;
+        }h1{text-align:center;}
+        h2{text-align:center;}body{
+                background-image: url(hospital6.jpg);
+                background-size:cover;
+            }
+            nav{
+                background-color:rgba(234,45,23);
+                color:aquamarine;
+                padding:10px;
+            }
+            nav ul{
+                list-style-type: none;
+                margin:0;
+                padding:0;
+            }
+            nav ul li{
+                display:inline;
+                margin-right: 20px;
+            }
+            nav ul li a{
+                color:azure;
+                text-decoration:none;
+
+            }
+            nav ul li a:hover{
+                text-decoration:underline;}
+            p{
+                text-align:center;
+            }h1{
+                text-decoration: 5px 5px 10px dotted;
+                text-shadow: 5px 10px 10px red;
+            }
+            </style>            
+
+    </head>
+    <body>          
+       
+        
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contactus.html">Contactus</a><li>
+                    <li><a href="register.html">Register</a><li>
+                        <li><a href="bill.html">Bill</a><li>
+                    </ul>
+                </nav><div class="container">
+
+<h1>registration form</h1>
+        <form action="success.html" registrationform onSubmit="return validateForm()">
+            <form name="myform"  method="post"action="LoginSuccess.html" onsubmit="return validateemail();">  
+      <h2> <label for="username">Username:</label></h2>
+       <h2><input type="text"id="username"name="username"required placeholder="Enter username" autofocus><br></h2>
+     <h2><label for="password">Password:</label></h2>
+    <h2> <input type="password"id="password"name="password" reqiured placeholder="Enter password"><br></h2>
+    <h2><label for=" confirmpassword">Confirm password:</label></h2>
+  
+    <h2> <input type="password"id="confirmpassword"name="confirmpassword" reqiured placeholder="Enter password"><br></h2>
+    <h2><label for="email">Email:</label></h2>
+        <h2><input type="email" name="email" id="email"reqired placeholder="Enter email">
+</h2><br>
+        <h2>Address:<input type="text" name="add" placeholder="Enter address"></h2><br>   
+        <h2>Age:<input type="number" name="num"placeholder="Enter age"></h2><br>
+        <label for="dob"></label>
+        <h2>Date of Birth:<input type="date" id="dob" name="dob" required></h2>
+       <h2> select qualification:
+        <select name="branch">
+            <option value="psychologist">psychologist</option>
+            <option value="neurologist">neurologist</option>
+            <option value="cardiologist">cardiologist</option></h2><br>
+            <label>
+   <h2><input type="radio" name="gender" value="f">female</label><br>
+   <label><input type="radio" name="gender" value="m">male</label><br></h2>
+<h2> <input type="submit" value="register"></form></h2><script>
+    function validateForm(){
+        const username=document.getElementById('username').value;
+        const password=document.getElementById('password').value;
+        const confirmpassword=document.getElementById('confirmpassword').value;
+    const email=document.getElementById('email').value;
+    const dobInput=document.getElementById('dob');
+    const dob=new Date(dobInput.value);
+    const currentDate=new Date();
+    const radioButtons=document.getElementsByName('gender');
+    let checkedButton=false;
+    for(let i=0;i<radioButtons.length;i++){
+        if(radioButtons[i].checked){
+            checkedButton=true;
+            break;
+        }
+    }
+    if(!checkedButton){
+        alert("please select a gender");
+        return false;
+    }
+    if(isNaN(dob)||dob>currentDate){
+        alert("please enter a valid date of birth in the past");
+        return false;
+    }
+    if(username.length<4||username.length>20){
+        alert("username must be between 4 and 20 characters");
+        return false;}
+        if(password!==confirmpassword){
+            alert("passwords do not match");
+            return false;
+        }
+        if(!validateEmail(email)){
+            alert("invalid email format");
+            return false;
+        }
+        return true;
+    }
+    function validateEmail(email){
+        const emailPattern=/^[^\s@]+@[^\s@]+.[^\s@]+$/;
+        return emailPattern.test(email);
+    }
+</script>
+</div>
+    </body>
+</html>

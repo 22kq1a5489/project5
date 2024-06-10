@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>bill</title>
+    <style>  
+     
+    .container{
+    margin:0 auto;
+    background:hsl(154,25,37%);
+    box-sizing:content-box;}
+      @media screen and (min-width:320px){.container{
+        width:40dvi;height:300px;
+        padding-bottom:20px 20px;
+        padding-left: 10px 10px;
+        padding-right:10px 10px;
+        padding-top:10px 10px;
+        background-color:lightblue;
+    }
+        body{
+            background-color:grey;background-image:url(hospital10.jpg);
+            background-size:cover;
+        }}
+        @media screen and (min-width:768px) and (max-width:1024px){
+            .container{
+        width:40dvi;height:300px;
+        padding-bottom:20px 20px;
+        padding-left: 10px 10px;
+        padding-right:10px 10px;
+        padding-top:10px 10px;
+        background-color:lightblue;
+    }
+            body{background-color:aliceblue;background-image:url(hospital10.jpg);
+            background-size:cover;
+            background-color:gold;
+        }}
+        @media screen and (min-width:1224px){
+            .container{
+        width:40dvi;height:300px;
+        padding-bottom:20px 20px;
+        padding-left: 10px 10px;
+        padding-right:10px 10px;
+        padding-top:10px 10px;
+        background-color:lightblue;
+    }
+        body{
+            background-color:darkolivegreen;background-image:url(hospital10.jpg);
+            background-size:cover;
+        }}
+        @media screen and (min-width:1824px){
+            .container{
+        width:40dvi;height:300px;
+        padding-bottom:20px 20px;
+        padding-left: 10px 10px;
+        padding-right:10px 10px;
+        padding-top:10px 10px;
+        background-color:lightblue;
+    }
+        body{
+            background-color:indianred;background-image:url(hospital10.jpg);
+            background-size:cover;
+        }}body{p{font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;} h1{text-align:center;}
+               h2{text-align:center;} body{background-image: url(hospital10.jpg);
+                    background-size:cover;}
+                }
+                nav{
+                    background-color:rgba(234,45,23);
+                    color:aquamarine;
+                    padding:10px;
+                }
+                nav ul{
+                    list-style-type: none;
+                    margin:0;
+                    padding:0;
+                }
+                nav ul li{
+                    display:inline;
+                    margin-right: 20px;
+    
+                }
+                nav ul li a{
+                    color:azure;
+                    text-decoration:none;
+    
+                }
+                nav ul li a:hover{
+                    text-decoration:underline;
+                }
+        body{
+        background-color:rgb(24,35,46);
+        color:rgb(163, 136, 46);
+        background-image:url(hospital10.jpg);
+        background-size:cover;}h1{
+            text-align: center;
+        }h2{text-align:justify;}
+        </style>
+    
+    </head>
+        <body><nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contactus.html">Contactus</a><li>
+                    <li><a href="register.html">Register</a><li>
+                        <li><a href="bill.html">Bill</a><li>
+                    </ul>
+                </nav><div class="container">
+            <form action="phonepay.html">
+            <h1>BILL PAYMENT</h1>
+            <h2>Name:<input type="text" name="pname"autofocus placeholder="Enter patient name"><br>
+             Id:<input type="number" name="pid" placeholder="Enter patient id"><br>
+             Phone number:<input type="number" name="pnum" placeholder="Enter patient num"><br>
+             Email:<input type="number" name="pid" placeholder="Enter email"><br></h2>
+            <h2> hospital name:<select id="hospital" name="hname" required>
+                <option value="">select a hospital</option>
+                <option value="kims">KIMS</option>
+                  <option value="rims">RIMS</option>
+                  <option value="sangamitra">Sangamitra</option>
+             </select></h2></br>
+          <h2><button type="submit" value="submit">pay</button></h2></form></div>
+             </body>
+</html>
